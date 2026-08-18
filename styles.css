@@ -62,14 +62,18 @@ h1 em, h2 em { color: var(--coral); font-style: italic; font-weight: 400; }
 .manifesto h2, .section-intro h2, .formula h2, .closing h2 { font-size: clamp(40px, 6vw, 82px); max-width: 1100px; margin: 35px 0 60px; }
 .manifesto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; border-top: 1px solid rgba(255,255,255,.18); padding-top: 35px; }
 .manifesto-grid p { color: #bfd0d0; line-height: 1.75; font-size: 16px; }
+.source-note { border-left: 2px solid var(--coral); padding-left: clamp(22px, 3vw, 42px); }
+.source-note > span { color: var(--coral); font-size: 9px; letter-spacing: 1.8px; font-weight: 700; }
+.source-note p { font-size: 19px; color: white; margin-top: 18px; }
 
 .benefits { padding: clamp(75px, 10vw, 140px) clamp(24px, 7vw, 105px); }
 .section-intro { display: flex; align-items: end; justify-content: space-between; gap: 40px; }
 .section-intro h2 { margin-bottom: 0; }
 .section-intro > p { max-width: 330px; line-height: 1.7; color: #607176; }
-.benefit-list { margin-top: 80px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.benefit-list { margin-top: 80px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .benefit { padding: 26px clamp(18px, 2.2vw, 38px) 34px; min-height: 420px; border-right: 1px solid var(--line); display: flex; flex-direction: column; transition: .3s; }
-.benefit:last-child { border-right: 0; }
+.benefit:nth-child(3n) { border-right: 0; }
+.benefit:nth-child(-n+6) { border-bottom: 1px solid var(--line); }
 .benefit:hover { background: var(--ink); color: white; transform: translateY(-8px); }
 .benefit-number { font-size: 10px; letter-spacing: 2px; color: var(--coral); }
 .benefit-icon { font: 400 42px "Manrope"; color: var(--coral); margin: 48px 0 25px; }
@@ -88,10 +92,11 @@ h1 em, h2 em { color: var(--coral); font-style: italic; font-weight: 400; }
 .tradeoff p { margin: 0; color: #9fb3b5; line-height: 1.65; font-size: 14px; }
 
 .challenges { padding: clamp(75px, 10vw, 140px) clamp(24px, 7vw, 105px); background: var(--mint); }
-.challenges-title { display: flex; justify-content: space-between; align-items: end; margin-bottom: 70px; }
+.challenges-title { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 70px; }
 .challenges-title h2 { font-size: clamp(48px, 6vw, 82px); margin: 0; text-align: right; }
-.challenge-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.challenge { background: var(--paper-soft); min-height: 360px; padding: 25px; display: flex; flex-direction: column; box-shadow: 0 10px 0 rgba(13,37,45,.08); transition: transform .3s ease; }
+.aspects-lead { max-width: 480px; line-height: 1.7; margin: 25px 0 0; }
+.challenge-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.challenge { background: var(--paper-soft); min-height: 300px; padding: 25px; display: flex; flex-direction: column; box-shadow: 0 10px 0 rgba(13,37,45,.08); transition: transform .3s ease; }
 .challenge:hover { transform: translateY(-8px) rotate(-1deg); }
 .challenge-index { font-size: 10px; color: #687d7d; letter-spacing: 2px; }
 .challenge-symbol { font: 400 45px "Manrope"; color: var(--coral); margin: 40px 0 auto; }
