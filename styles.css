@@ -124,6 +124,22 @@ h1 em, h2 em { color: var(--coral); font-style: italic; font-weight: 400; }
 .shape-left { left: -280px; top: 80px; box-shadow: 70px 70px 0 rgba(13,37,45,.08); }
 .shape-right { right: -250px; bottom: -150px; box-shadow: -55px -55px 0 rgba(243,239,230,.15); }
 
+.author { background: var(--ink); color: white; padding: clamp(75px, 9vw, 130px) clamp(24px, 10vw, 155px); display: grid; grid-template-columns: minmax(280px, 430px) 1fr; align-items: center; gap: clamp(55px, 10vw, 150px); position: relative; overflow: hidden; }
+.author::before { content: ""; position: absolute; width: 500px; height: 500px; border: 1px solid rgba(159,199,181,.14); border-radius: 50%; right: -260px; top: -260px; }
+.author-photo-wrap { position: relative; padding: 18px 0 0 18px; }
+.author-photo-wrap::before { content: ""; position: absolute; inset: 0 18px 18px 0; border: 1px solid var(--mint); }
+.author-photo-number { position: absolute; z-index: 2; right: -18px; top: 42px; background: var(--coral); color: var(--ink); padding: 10px 14px; font-size: 9px; letter-spacing: 1.5px; font-weight: 700; }
+.author-photo { display: block; position: relative; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 28%; filter: saturate(.9) contrast(1.03); }
+.author-info { max-width: 700px; position: relative; z-index: 1; }
+.author-info h2 { font-size: clamp(45px, 5.5vw, 78px); margin: 30px 0 20px; color: white; }
+.author-info h2 em { color: var(--coral); }
+.author-role { color: var(--mint); font: 500 clamp(17px, 1.5vw, 21px) "Manrope"; margin-bottom: 40px; }
+.author-study { border-top: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2); padding: 23px 0; display: grid; grid-template-columns: 120px 1fr; gap: 25px; }
+.author-study span { color: var(--coral); font-size: 9px; letter-spacing: 1.8px; padding-top: 5px; }
+.author-study p { color: #c1d0d1; line-height: 1.65; margin: 0; }
+.university-logo { display: inline-flex; background: white; padding: 15px 20px; margin-top: 30px; min-height: 72px; align-items: center; }
+.university-logo img { width: min(240px, 55vw); height: auto; display: block; }
+
 footer { background: var(--ink-deep); color: #c4d1d1; min-height: 125px; padding: 0 clamp(24px, 7vw, 105px); display: flex; justify-content: space-between; align-items: center; font-size: 11px; letter-spacing: .5px; }
 .brand-light { color: white; }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
@@ -139,6 +155,7 @@ footer { background: var(--ink-deep); color: #c4d1d1; min-height: 125px; padding
   .formula { grid-template-columns: 1fr; }
   .tradeoffs { grid-template-columns: 1fr; gap: 55px; }
   .challenge-grid { grid-template-columns: 1fr 1fr; }
+  .author { grid-template-columns: minmax(240px, 340px) 1fr; gap: 55px; }
 }
 
 @media (max-width: 600px) {
@@ -160,6 +177,9 @@ footer { background: var(--ink-deep); color: #c4d1d1; min-height: 125px; padding
   .challenges-title h2 { text-align: left; margin-top: 30px; }
   .challenge-grid { grid-template-columns: 1fr; }
   .challenge { min-height: 320px; }
+  .author { grid-template-columns: 1fr; }
+  .author-photo-wrap { max-width: 360px; margin: 0 auto; }
+  .author-study { grid-template-columns: 1fr; gap: 8px; }
   footer { padding: 34px 24px; flex-direction: column; gap: 20px; text-align: center; }
 }
 
