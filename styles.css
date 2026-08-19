@@ -116,6 +116,18 @@ h1 em, h2 em { color: var(--coral); font-style: italic; font-weight: 400; }
 .challenge h3 { font: 650 27px "Manrope"; letter-spacing: -.04em; margin-bottom: 12px; }
 .challenge p { font-size: 14px; line-height: 1.65; color: #5a6b6f; margin: 0; }
 
+.references { background: var(--paper-soft); padding: clamp(75px, 10vw, 140px) clamp(24px, 9vw, 140px); display: grid; grid-template-columns: .75fr 1.25fr; gap: clamp(55px, 9vw, 130px); }
+.references-heading h2 { font-size: clamp(44px, 5.5vw, 76px); margin: 34px 0; }
+.references-heading > p:last-child { max-width: 430px; color: #607176; line-height: 1.75; }
+.reference-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--ink); }
+.reference-item { min-height: 130px; padding: 25px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 55px 1fr auto; align-items: center; gap: 22px; }
+.reference-number { color: var(--coral); font: 700 10px "Manrope"; letter-spacing: 1.5px; }
+.reference-author { display: block; color: #718085; font-size: 9px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 8px; }
+.reference-item h3 { font: 600 clamp(18px, 1.7vw, 24px) "Manrope"; letter-spacing: -.03em; margin: 0; }
+.reference-item > a { border-bottom: 1px solid var(--ink); padding: 9px 0; font-size: 11px; font-weight: 700; white-space: nowrap; transition: color .25s, border-color .25s; }
+.reference-item > a span { color: var(--coral); margin-left: 12px; }
+.reference-item > a:hover, .reference-item > a:focus-visible { color: var(--coral); border-color: var(--coral); outline: none; }
+
 .formula { background: var(--paper-soft); padding: clamp(75px, 10vw, 140px) clamp(24px, 9vw, 140px); display: grid; grid-template-columns: 1fr 1fr; gap: 10vw; }
 .formula-copy > p:last-child { max-width: 470px; line-height: 1.75; color: #617175; }
 .formula-steps { border-top: 1px solid var(--ink); }
@@ -168,6 +180,7 @@ footer { background: var(--ink-deep); color: #c4d1d1; min-height: 125px; padding
   .formula { grid-template-columns: 1fr; }
   .tradeoffs { grid-template-columns: 1fr; gap: 55px; }
   .challenge-grid { grid-template-columns: 1fr 1fr; }
+  .references { grid-template-columns: 1fr; }
   .author { grid-template-columns: minmax(220px, 290px) 1fr; gap: 55px; }
 }
 
@@ -191,6 +204,8 @@ footer { background: var(--ink-deep); color: #c4d1d1; min-height: 125px; padding
   .challenges-title h2 { text-align: left; margin-top: 30px; }
   .challenge-grid { grid-template-columns: 1fr; }
   .challenge { min-height: 320px; }
+  .reference-item { grid-template-columns: 38px 1fr; }
+  .reference-item > a { grid-column: 2; justify-self: start; }
   .author { grid-template-columns: 1fr; }
   .author-photo-wrap { max-width: 280px; margin: 0 auto; }
   .author-study { grid-template-columns: 1fr; gap: 8px; }
