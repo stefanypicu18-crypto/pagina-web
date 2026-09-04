@@ -202,6 +202,10 @@ h1 em, h2 em { color: var(--coral); font-style: italic; font-weight: 400; }
 .closing h2 em { color: var(--paper); }
 .closing-content > p:not(.eyebrow) { max-width: 630px; margin: 0 auto; line-height: 1.7; }
 .drive-callout { width: min(100%, 650px); margin: 46px auto 5px; padding: 28px clamp(20px,4vw,42px); background: var(--paper); border: 2px solid var(--ink); box-shadow: 12px 12px 0 var(--ink); display: grid; justify-items: center; gap: 9px; }
+.activity-section { padding: clamp(70px,9vw,120px) 24px; background: var(--coral); color: var(--ink); text-align: center; position: relative; overflow: hidden; }
+.activity-section::after { content: ""; position: absolute; width: 380px; height: 380px; right: -220px; bottom: -250px; border: 1px solid rgba(13,37,45,.25); border-radius: 50%; }
+.activity-content { position: relative; z-index: 1; }
+.activity-section .drive-callout { margin-top: 0; }
 .drive-label { color: var(--coral); font: 800 10px "Manrope"; letter-spacing: 2px; text-transform: uppercase; }
 .drive-callout > strong { font: 700 clamp(20px,2.2vw,28px) "Manrope"; }
 .drive-button { display: flex; width: fit-content; margin-top: 15px; padding: 19px 34px; gap: 42px; align-items: center; background: var(--ink); color: white; border: 2px solid var(--ink); font: 800 16px "Manrope"; letter-spacing: .3px; transition: transform .25s, background .25s, color .25s; }
