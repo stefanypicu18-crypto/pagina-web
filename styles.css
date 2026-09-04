@@ -206,6 +206,22 @@ h1 em, h2 em { color: var(--coral); font-style: italic; font-weight: 400; }
 .activity-section::after { content: ""; position: absolute; width: 380px; height: 380px; right: -220px; bottom: -250px; border: 1px solid rgba(13,37,45,.25); border-radius: 50%; }
 .activity-content { position: relative; z-index: 1; }
 .activity-section .drive-callout { margin-top: 0; }
+.video-section { padding: clamp(75px,9vw,130px) clamp(24px,9vw,140px); background: var(--ink); color: white; display: grid; grid-template-columns: .75fr 1.25fr; align-items: center; gap: clamp(45px,8vw,120px); }
+.video-intro h2 { margin: 32px 0; font-size: clamp(44px,5.5vw,76px); }
+.video-intro > p:last-child { max-width: 420px; color: #bfd0d0; line-height: 1.75; }
+.youtube-card { display: block; background: var(--paper-soft); color: var(--ink); box-shadow: 14px 14px 0 var(--coral); transition: transform .3s, box-shadow .3s; }
+.youtube-card:hover, .youtube-card:focus-visible { transform: translate(-5px,-5px); box-shadow: 20px 20px 0 var(--coral); outline: 3px solid var(--mint); outline-offset: 6px; }
+.youtube-thumbnail { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #0b171b; }
+.youtube-thumbnail img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.youtube-card:hover .youtube-thumbnail img { transform: scale(1.035); }
+.youtube-play { position: absolute; inset: 50% auto auto 50%; translate: -50% -50%; width: 76px; height: 54px; border-radius: 14px; background: #ff0033; color: white; display: grid; place-items: center; padding-left: 4px; font-size: 24px; box-shadow: 0 8px 28px rgba(0,0,0,.35); }
+.youtube-duration { position: absolute; right: 12px; bottom: 12px; padding: 4px 7px; border-radius: 4px; background: rgba(0,0,0,.82); color: white; font: 700 12px "Manrope"; }
+.youtube-meta { min-height: 100px; padding: 20px 22px; display: grid; grid-template-columns: 46px 1fr auto; align-items: center; gap: 16px; }
+.youtube-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--coral); display: grid; place-items: center; color: white; font: 800 12px "Manrope"; }
+.youtube-meta strong, .youtube-meta span { display: block; }
+.youtube-meta strong { font: 700 clamp(17px,1.7vw,22px) "Manrope"; margin-bottom: 5px; }
+.youtube-meta div > span { color: #68787b; font-size: 13px; }
+.youtube-meta .youtube-more { font-size: 30px; line-height: 1; }
 .drive-label { color: var(--coral); font: 800 10px "Manrope"; letter-spacing: 2px; text-transform: uppercase; }
 .drive-callout > strong { font: 700 clamp(20px,2.2vw,28px) "Manrope"; }
 .drive-button { display: flex; width: fit-content; margin-top: 15px; padding: 19px 34px; gap: 42px; align-items: center; background: var(--ink); color: white; border: 2px solid var(--ink); font: 800 16px "Manrope"; letter-spacing: .3px; transition: transform .25s, background .25s, color .25s; }
@@ -254,6 +270,7 @@ footer { background: var(--ink-deep); color: #c4d1d1; min-height: 125px; padding
   .importance-grid article { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.14); padding-left: 0 !important; }
   .timeline { grid-template-columns: repeat(3,1fr); }
   .learning { grid-template-columns: 1fr; }
+  .video-section { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
@@ -287,6 +304,7 @@ footer { background: var(--ink-deep); color: #c4d1d1; min-height: 125px; padding
   .timeline { grid-template-columns: 1fr 1fr; }
   .process-copy, .learning-grid { grid-template-columns: 1fr; }
   .learning-grid article:nth-child(even) { padding-left: 0; border-left: 0; }
+  .youtube-play { width: 64px; height: 46px; font-size: 20px; }
   footer { padding: 34px 24px; flex-direction: column; gap: 20px; text-align: center; }
 }
 
